@@ -22,7 +22,7 @@ module.exports = {
     this.url = url;
     this.method = method;
     this._postData = postdata;
-    this.setEncoding = function() { /* noop */ };
+    this.setEncoding = function() { 'utf8'; };
 
     this.addListener = this.on = function(type, callback) {
       if (type === 'data') {

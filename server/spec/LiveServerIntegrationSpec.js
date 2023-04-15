@@ -10,6 +10,24 @@ describe('server', function() {
     });
   });
 
+  // it('Should accept GET method to /classes/messages', function() {
+  //   var stubMsg = {
+  //     username: 'Sean',
+  //     text: 'Go get me GET method'
+  //   };
+  //   var req = new stubs.request('/classes/messages', 'POST', stubMsg);
+  //   var res = new stubs.response();
+
+  //   handler.requestHandler(req, res);
+
+  //   req = new stubs.request('/classes/messages', 'GET');
+  //   res = new stubs.response();
+  //   handler.requestHandler(req, res);
+
+  //   expect(res._responseCode).to.equal(200);
+  //   expect(res._ended).to.equal(true);
+  // });
+
   it('should send back parsable stringified JSON', function(done) {
     request('http://127.0.0.1:3000/classes/messages', function(error, response, body) {
       expect(JSON.parse.bind(this, body)).to.not.throw();
