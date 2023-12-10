@@ -12,12 +12,11 @@
     "chai": "^4.2.0",
     "jquery": "^3.5.1",
     "mocha": "^5.2.0",
-    "nodemon": "^2.0.22",
     "sinon": "^6.3.5",
-    "underscore": "^1.13.6"
+    "underscore": "^1.11.0"
   },
   "scripts": {
-    "start:server": "nodemon server/basic-server.js",
+    "start:server": "node server/basic-server.js",
     "start:client": "npx live-server",
     "test": "mocha server/spec",
     "lint": "eslint ./"
